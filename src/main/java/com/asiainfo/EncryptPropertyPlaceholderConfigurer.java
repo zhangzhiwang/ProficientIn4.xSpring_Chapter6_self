@@ -23,7 +23,7 @@ public class EncryptPropertyPlaceholderConfigurer extends PropertyPlaceholderCon
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(DESUtils.getEncryptString("BMW"));
-//		System.out.println(DESUtils.getDecryptString("yJBcaP7GrGY="));
+//		System.out.println(DESUtils.getEncryptString("BMW"));
+		System.out.println(DESUtils.getDecryptString("lOLqi5hIQKQ="));
 	}
 }

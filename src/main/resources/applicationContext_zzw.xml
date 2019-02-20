@@ -20,6 +20,10 @@
 	<context:property-placeholder location="classpath*:**/*.properties"/>
 <!-- 	<bean id="car" class="com.asiainfo.Car" p:brand="${aaa}" p:maxSpeed="${bbb}"></bean> -->
 	
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" p:locations="classpath*:**/*.properties" p:fileEncoding="utf-8"></bean>
-	<bean id="car" class="com.asiainfo.Car" p:brand="${aaa}" p:maxSpeed="${bbb}"></bean>
+<!-- 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" p:locations="classpath*:**/*.properties" p:fileEncoding="utf-8"></bean> -->
+<!-- 	<bean id="car" class="com.asiainfo.Car" p:brand="${aaa}" p:maxSpeed="${bbb}"></bean> -->
+
+	<!-- 一个bean引入另一个bean的属性值 -->
+	<bean id="car" class="com.asiainfo.Car" p:brand="Audi" p:maxSpeed="1"></bean>
+	<bean id="user" class="com.asiainfo.User" p:carBrand="#{car.brand}" p:carMaxSpeed="#{car.maxSpeed}"></bean>
 </beans>

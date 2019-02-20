@@ -1,8 +1,8 @@
 package com.asiainfo;
 
 public class Car {
-	private String brand;
-	private String maxSpeed;
+	public String brand;
+	public String maxSpeed;
 
 	public void setBrand(String brand) {
 		this.brand = brand;
@@ -11,6 +11,14 @@ public class Car {
 	public void setMaxSpeed(String maxSpeed) {
 		this.maxSpeed = maxSpeed;
 	}
+	
+//	public String getBrand() {
+//		return brand;
+//	}
+//
+//	public String getMaxSpeed() {
+//		return maxSpeed;
+//	}
 
 	@Override
 	public String toString() {

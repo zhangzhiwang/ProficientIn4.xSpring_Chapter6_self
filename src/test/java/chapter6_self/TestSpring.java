@@ -8,7 +8,7 @@ public class TestSpring {
 	@Test
 	public void test() {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext_zzw.xml");
-		Object bean = applicationContext.getBean("car");
+		Object bean = applicationContext.getBean("myUser");
 		System.out.println(bean);
 	}
 }
