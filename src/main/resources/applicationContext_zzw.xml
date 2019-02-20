@@ -13,6 +13,13 @@
        http://www.asiainfo.com/schema/service.xsd
        ">
 
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" p:location="classpath:outer.properties" p:fileEncoding="utf-8"></bean>
+	<context:component-scan base-package="com.asiainfo"></context:component-scan>
+	<!-- 引用外部配置文件 -->
+<!-- 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" p:locations="classpath*:**/*.properties" p:fileEncoding="utf-8"  p:placeholderPrefix="*[" p:placeholderSuffix="@"></bean> -->
+<!-- 	<bean id="car" class="com.asiainfo.Car" p:brand="*[aaa@" p:maxSpeed="*[bbb@"></bean> -->
+	<context:property-placeholder location="classpath*:**/*.properties"/>
+<!-- 	<bean id="car" class="com.asiainfo.Car" p:brand="${aaa}" p:maxSpeed="${bbb}"></bean> -->
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" p:locations="classpath*:**/*.properties" p:fileEncoding="utf-8"></bean>
 	<bean id="car" class="com.asiainfo.Car" p:brand="${aaa}" p:maxSpeed="${bbb}"></bean>
 </beans>
